@@ -1,0 +1,5 @@
+The script is written in bash and is named as bash_scripting.sh. The script takes exactly two filenames as arguments. If exactly two names are not provided, the script prints a usage message and exits, otherwise the script does what is described next. 
+The usage message tells the user how to use the script. The script checks whether the input file exists or not. If the input file does not exist, the script generates an appropriate error message and exits. If the input file exists, then the script proceeds to the next step.
+The script prints the unique cities from the input file to the output file. 
+The script finds the top 3 individuals with the highest salary and saves their Name, Age, City, and Salary to the output file. 
+The script computes the average salary for each City in the dataset and saves it to the output file. The script also computes the average salary for each City in the dataset and saves it to the output file. The output is saved as follows: City: city1, Salary: average salary of city1.
