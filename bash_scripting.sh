@@ -35,9 +35,9 @@ awk -F, 'NR>1{sum[$3]+=$4; count[$3]++} END{for(city in sum) print "City:", city
 echo "------------------" >> $output_file
 
  
-#Calculate the overall average salary
+#Calculating the overall average salary
 avg=$(awk -F, 'NR==1 {next} {s += $4; ct++} END {print s / ct}' "$1")
-# Identify individuals with a salary above the overall average salary
+# printing individuals with a salary above the overall average salary
 echo "Details of individuals with a salary above the overall average salary: " >> $output_file
 awk -F, -v avg="$avg" 'NR>1 && $4 > avg {print $1, $2, $3, $4}' $input_file | sed 's/above/over/' >> $output_file
 echo "------------------" >> $output_file
