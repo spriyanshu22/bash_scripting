@@ -31,7 +31,7 @@ awk -F, 'NR>1{sum[$3]+=$4; count[$3]++} END{for(city in sum) print "City:", city
 echo "------------------" >> $2
 
 
-# computing the average salary for each City in the dataset
+# printing the details of individuals with a salary above the overall average salary
 echo "Details of individuals with a salary above the overall average salary: " >> $2
 awk -F, 'NR>1{sum+=$4; count++} END{avg=sum/count} {if($4>avg) print $1, $2, $3, $4}' $1 >> $2
 echo "------------------" >> $2
